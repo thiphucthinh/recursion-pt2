@@ -6,8 +6,10 @@ number raised to the power of half of n power.
 
 The following is math, not JavaScript:
 
-exponent(b, 0) // 1
-exponent(b, 1) // b
+exponent(b, 0) // 1 ==> b^(0/2) => b^0 => 1
+exponent(b, 1) // b ==> b^(1/2) => b^1 = b     b^2^1/2  =  √(b^2) √anything(^2) = anything
+anyting to 1/2 power = square
+anyting to 1/3 power = cube
 exponent(b, n) // exponent(b, n / 2) ** 2             [for even n]
 exponent(b, n) // b * (exponent(b, (n - 1) / 2) ** 2) [for odd n]
 
@@ -19,6 +21,7 @@ calculate the value and multiply it by itself. So don't cheat and use
 exponentiation in your solution.
 
 Examples:
+a
 
 advancedExponent(2, 0); // 1
 advancedExponent(2, 1); // 2
@@ -33,6 +36,10 @@ be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
 
+exponent(b, 0) // 1
+exponent(b, 1) // b
+exponent(b, n) // exponent(b, n / 2) ** 2             [for even n]
+exponent(b, n) // b * (exponent(b, (n - 1) / 2) ** 2) [for odd n]
 
 function advancedExponent(b, n) {
 
