@@ -6,17 +6,42 @@ return false.
 Examples:
 
 addToTwelve([1, 3, 4, 7, 5]); // true
+             1  3
+                3  4
+                   4  7
+                      7  5
 addToTwelve([1, 3, 4, 7, 6]); // false
 addToTwelve([1, 11, 4, 7, 6]); // true
 addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
-
 function addToTwelve(arr) {
-  // Your code here 
+  if (arr.length === 1) {
+    return false;
+  };
+  //base case;
+  if (arr[0] + arr[1] === 12) {
+    return true;
+  }
+  //recursive case;
+  return addToTwelve(arr.slice(1));
+                    //resursive step
 }
 
+
+function addToTwelve(arr) {
+  if (arr.length === 1) {
+    return false;
+  };
+  //base case;
+  if (arr[0] + arr[1] === 12) {
+    return true;
+  }
+  //recursive case;
+  return addToTwelve(arr.slice(1));
+                    //resursive step
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
