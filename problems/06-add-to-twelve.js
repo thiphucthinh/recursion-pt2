@@ -6,7 +6,7 @@ return false.
 Examples:
 
 addToTwelve([1, 3, 4, 7, 5]); // true
-             1  3
+1  3
                 3  4
                    4  7
                       7  5
