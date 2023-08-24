@@ -16,32 +16,32 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
-function addToTwelve(arr) {
-  if (arr.length === 1) {
+// function addToTwelve(arr) {
+//   if (arr.length === 1) {
+//     return false;
+//   };
+//   //base case;
+//   if (arr[0] + arr[1] === 12) {
+//     return true;
+//   }
+//   //recursive case;
+//   return addToTwelve(arr.slice(1));
+//                     //resursive step
+// }
+
+function addToTwelve(arr, index = 0) {
+  if (index >= arr.length) {
     return false;
   };
-  //base case;
-  if (arr[0] + arr[1] === 12) {
+
+  if (arr[index] + arr[index + 1] === 12) {
     return true;
   }
-  //recursive case;
-  return addToTwelve(arr.slice(1));
-                    //resursive step
+
+  return addToTwelve(arr, index +1);
+
 }
 
-
-function addToTwelve(arr) {
-  if (arr.length === 1) {
-    return false;
-  };
-  //base case;
-  if (arr[0] + arr[1] === 12) {
-    return true;
-  }
-  //recursive case;
-  return addToTwelve(arr.slice(1));
-                    //resursive step
-}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
